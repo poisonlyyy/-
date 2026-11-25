@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Бокс — секция «Панчер»</title>
+<style>
+  :root{--red:#b3121f;--dark:#111;--ink:#222;--muted:#666;--line:#e5e5e5}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--ink);line-height:1.55;background:#fafafa}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+  header{position:sticky;top:0;background:var(--dark);color:#fff;z-index:10}
+  header .wrap{display:flex;align-items:center;justify-content:space-between;padding-top:12px;padding-bottom:12px}
+  .logo{font-weight:800;letter-spacing:.5px}
+  nav a{color:#ddd;text-decoration:none;margin-left:22px;font-size:15px}
+  nav a:hover{color:#fff}
+  .hero{background:var(--dark);color:#fff;padding:72px 0;text-align:center}
+  .hero h1{font-size:44px;line-height:1.15;margin-bottom:14px}
+  .hero p{font-size:19px;color:#c9c9c9;max-width:620px;margin:0 auto 26px}
+  .btn{display:inline-block;background:var(--red);color:#fff;text-decoration:none;font-weight:700;padding:13px 30px;border-radius:6px;font-size:16px}
+  .btn:hover{background:#96101a}
+  section{padding:64px 0}
+  h2{font-size:30px;margin-bottom:8px}
+  .sub{color:var(--muted);margin-bottom:34px}
+  .grid{display:grid;gap:18px}
+  .cards{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+  .card{background:#fff;border:1px solid var(--line);border-radius:10px;padding:22px}
+  .card h3{font-size:19px;margin-bottom:8px}
+  .card .em{color:var(--red);font-weight:700;font-size:17px;margin-top:12px;display:block}
+  table{width:100%;border-collapse:collapse;background:#fff;border:1px solid var(--line);border-radius:10px;overflow:hidden}
+  th,td{padding:14px 18px;text-align:left;border-bottom:1px solid var(--line)}
+  th{background:#f2f2f2;font-weight:700}
+  .contact{background:#fff;border-top:1px solid var(--line)}
+  form{display:grid;gap:14px;max-width:520px}
+  input,textarea{padding:12px 14px;border:1px solid var(--line);border-radius:6px;font-size:15px;font-family:inherit}
+  button{background:var(--red);color:#fff;border:none;padding:13px 22px;border-radius:6px;font-size:16px;font-weight:700;cursor:pointer}
+  footer{background:var(--dark);color:#9a9a9a;padding:26px 0;text-align:center;font-size:14px}
+  @media(max-width:640px){.hero h1{font-size:32px}nav{display:none}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="logo">«Панчер»</div>
+    <nav>
+      <a href="#rasp">Расписание</a>
+      <a href="#trainer">Тренер</a>
+      <a href="#prices">Цены</a>
+      <a href="#kont">Контакты</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <h1>Бокс для детей и взрослых</h1>
+    <p>Группы для новичков и разрядников. Зал в центре, тренировки 3–5 раз в неделю, первое занятие бесплатно.</p>
+    <a class="btn" href="#kont">Записаться на пробную</a>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <h2>Что даёт секция</h2>
+    <p class="sub">Не «просто подраться» — техника, физподготовка и дисциплина.</p>
+    <div class="grid cards">
+      <div class="card"><h3>Техника</h3><p>Стойка, удар, защита, перемещения — от простого к сложному, без прыжков через голову.</p></div>
+      <div class="card"><h3>Физподготовка</h3><p>ОФП, работа на мешках, скакалка, лапы. Нагрузка подстраивается под уровень группы.</p></div>
+      <div class="card"><h3>Спарринги — по желанию</h3><p>Только после базовой техники и по согласованию с тренером. Вольных боёв нет.</p></div>
+      <div class="card"><h3>Дети с 8 лет</h3><p>Отдельные детские группы: меньше снарядов, больше игры и координации.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="rasp">
+  <div class="wrap">
+    <h2>Расписание</h2>
+    <p class="sub">Зал — ул. Ринговая, 7 (вход со двора).</p>
+    <table>
+      <tr><th>Группа</th><th>Дни</th><th>Время</th></tr>
+      <tr><td>Дети 8–12</td><td>Вт, Чт, Сб</td><td>17:00–18:15</td></tr>
+      <tr><td>Подростки 13–17</td><td>Вт, Чт, Сб</td><td>18:30–19:45</td></tr>
+      <tr><td>Взрослые — новички</td><td>Пн, Ср, Пт</td><td>19:00–20:15</td></tr>
+      <tr><td>Взрослые — продолжающие</td><td>Пн–Пт</td><td>20:30–22:00</td></tr>
+    </table>
+  </div>
+</section>
+
+<section id="trainer">
+  <div class="wrap">
+    <h2>Тренер</h2>
+    <p class="sub">Один человек на весь зал — не конвейер.</p>
+    <div class="card" style="max-width:640px">
+      <h3>Алексей Громов</h3>
+      <p>Мастер спорта по боксу, 12 лет тренерской работы, воспитанники — призёры областных первенств. Работает с новичками без опыта и с разрядниками на подготовке к соревнованиям.</p>
+      <span class="em">Личные беседы после тренировки — бесплатно и без записи.</span>
+    </div>
+  </div>
+</section>
+
+<section id="prices">
+  <div class="wrap">
+    <h2>Цены</h2>
+    <p class="sub">Первое занятие — бесплатно, без обязательств.</p>
+    <div class="grid cards">
+      <div class="card"><h3>Разовое</h3><p>Одна тренировка, любой уровень.</p><span class="em">600 ₽</span></div>
+      <div class="card"><h3>Абонемент 8 занятий</h3><p>Месяц, действует 30 дней с первого посещения.</p><span class="em">3 900 ₽</span></div>
+      <div class="card"><h3>Абонемент 12 занятий</h3><p>Месяц, для тех, кто ходит 3 раза в неделю.</p><span class="em">5 200 ₽</span></div>
+      <div class="card"><h3>Детская группа</h3><p>8 занятий в месяц, до 12 лет.</p><span class="em">3 400 ₽</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="kont">
+  <div class="wrap">
+    <h2>Контакты и запись</h2>
+    <p class="sub">Напишите — ответим в течение дня и подберём группу.</p>
+    <p style="margin-bottom:24px">Телефон: <b>+7 900 123-45-67</b> · Telegram: <b>@puncher_box</b> · ул. Ринговая, 7</p>
+    <form id="lead">
+      <input type="text" placeholder="Имя" required>
+      <input type="tel" placeholder="Телефон" required>
+      <input type="text" placeholder="Возраст / группа (ребёнок 10 лет, взрослый новичок…)">
+      <button type="submit">Отправить заявку</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">«Панчер» — секция бокса · ул. Ринговая, 7 · занятия с 2019 года</div>
+</footer>
+
+<script>
+  document.getElementById('lead').addEventListener('submit', function(e){
+    e.preventDefault();
+    alert('Заявка отправлена. Перезвоним в течение дня.');
+    this.reset();
+  });
+</script>
+
+</body>
+</html>
